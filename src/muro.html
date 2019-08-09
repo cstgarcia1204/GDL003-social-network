@@ -7,6 +7,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="murostyle.css"/>
         <link type="text/css" rel="stylesheet"/>
+        
         <style>
             @import url('https://fonts.googleapis.com/css?family=Buda:300%7CCinzel+Decorative%7CCodystar%7CEast+Sea+Dokdo%7CEmilys+Candy%7CFreckle+Face%7CGive+You+Glory%7CJust+Me+Again+Down+Here%7CKirang+Haerang%7CLondrina+Sketch%7CMajor+Mono+Display%7CNosifer%7CSedgwick+Ave+Display%7CSrisakdi%7CText+Me+One&display=swap');
             </style>
@@ -15,6 +16,7 @@
     <body>  
 
         <div id= "wallHead">
+            <br>    
             <h1>FoodJUNKIES</h1>
             <h2>Comida para todos en guadalajara</h2>
             <br>
@@ -24,35 +26,51 @@
             <input type= "image" id= "wall" src="https://image.flaticon.com/icons/png/512/85/85244.png" class="wallButton">
             <input type= "image" id= "profile" class="wallButton" src="https://image.flaticon.com/icons/png/512/17/17797.png">
             <input type= "image" id= "messages" class="wallButton" src="https://cdn.pixabay.com/photo/2016/04/16/10/32/icon-1332774_960_720.png">
-            <input type= "image" id= "notifications" class="wallButton" src="https://cdn2.iconfinder.com/data/icons/chat-app-content/24/_chat_alert-512.png">
-            <input type= "image" id= "menus" class="wallButton" src="https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/menu-512.png">
-        </container>
-            <br>
+            <input type= "image" id= "maps" class="wallButton" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpqbSL7V3huJPOIkTnwF8XRaDiYq9i-4ZREvP6i-2CWElf8TmR5g">
+            <input type= "image" id= "loguedOut" class="wallButton" src="https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/menu-512.png" ="Log out">        </container>
+    
             <hr>
             <br><br>
         <div class="inSession">
             <div id="firestoreDiv" class="inputFirestore">
-                <div class="photo" ></div>
-                <div class="name"></div>
+            <div class="photo" ></div>
+            <div class="name"></div>
+            </div>
+        
+            <div id="correo" class= "email"></div>
+            
+
+                <div id= "pensando">
                 <input type="textfield" id="latest" placeholder="¿Qué estás pensando?">
                 <button id="saveButton">Postear</button>
-            </div>
+            
             <br><br><br>
             <h3 id="outputH1" calss="outputStyle"></h3>    
         </div>
+
+        <input type="button" id="eliminar" onclick="eliminar" value="eliminar">
+
+        <div id= "botonesFinales">
         <input type= "image" id= "botonLike" class="likeButton" src="https://yokoent.com/images/thumbs-up-png-red-1.png" onclick="javascript: contador()" /><input type= "image" id="boton" class="likeButton2" value="">
-        <div>
-            <button id="loguedOut">Log Out</button>       
-        </div>
+        <div id="coments"></div>
         
+      
+    </div>
+    <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d119452.57083101754!2d-103.4054541!3d20.6739383!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1565297004758!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p><button onclick="geoFindMe()">Show my location</button></p><div id="out"></div>
+        </div>
+    
             <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+           
             <script src="init-firebase.js"></script>
             <script src="muro.js"></script>
             <script  src="data.js" ></script> 
             <script src="likes.js"></script>
+             
+        <script src="map.js"></script>
     </body>
     </html>

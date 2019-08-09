@@ -1,6 +1,6 @@
 //codigo por default para autenticacion con farebaseui 
 let uiConfig = {
-  callbacks: {
+  /*callbacks: {
     signInSuccessWitshAuthResult: function(authResult, redirectUrl) {
       console.log(authResult);
 
@@ -15,7 +15,7 @@ let uiConfig = {
     }
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
+  signInFlow: 'popup',*/
   signInSuccessUrl: 'muro.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
@@ -25,9 +25,11 @@ let uiConfig = {
   
   ],
   // Terms of service url.
-  tosUrl: 'index.html',
+  tosUrl: '<your-tos-url>',//'index.html',
   // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>'
+  privacyPolicyUrl: function(){
+    window.location.assign('<your-privacy-policy-url>');
+  }
 };
 
 let ui = new firebaseui.auth.AuthUI(firebase.auth());
