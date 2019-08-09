@@ -54,7 +54,15 @@
             font-family: 'Buda', cursive;
         }
     
+
+
+
+        #pensando{
+            text-align: center;
+        }
     }
+
+
 
     .caja{
         font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
@@ -76,7 +84,3 @@ border: 2px solid #5878ca;}
 body{
     background-color: #ffffff;
 }
-
-#loguedout{
-}
-
