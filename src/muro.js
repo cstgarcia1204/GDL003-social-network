@@ -101,7 +101,8 @@ function postEnTiempoReal(){
         changes.forEach(change=>{    
         console.log(change.doc.data());
         if(inputText.value != '' || inputText.value != null){
-            outputH1.innerHTML=`<br><p class='cajaActual'>${change.doc.data().texto+'<br>'+
+            outputH1.innerHTML=`<br><p class='cajaActual'>
+            ${change.doc.data().texto+'<br>'+
             ' Post by '+change.doc.data().nombre+'<br>'+' At '+change.doc.data().timeStamp.toDate()}</p>`;
             console.log(change.doc.data().nombre+change.doc.data().timeStamp.toDate());
         }else{
@@ -125,7 +126,7 @@ function postComentarios(){
             console.log(change.doc.data().texto);
             if(change.doc.data().texto == '' || change.doc.data().timeStamp == null){
                 console.log('Alert!!! ---> Campo vacío');
-            }else{outputComentarios.innerHTML+=`<br><p class= "caja">${change.doc.data().texto+'<br>'+
+            }else{outputComentarios.innerHTML+=`<br><p class= "caja"><span>${change.doc.data().texto+'</span>'+'<br>'+
             ' Post by '+change.doc.data().nombre+'<br>'+' At '+change.doc.data().timeStamp.toDate()+'<br>'
             }</p><br>`}
         })
