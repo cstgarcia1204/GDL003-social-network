@@ -92,6 +92,7 @@ buttonSave.addEventListener('click',function(){
     })
 });
 
+
 //funcion imprimir el mensaje actual
 function postEnTiempoReal(){
     firestore.collection('post').onSnapshot(snapshot =>{ 
