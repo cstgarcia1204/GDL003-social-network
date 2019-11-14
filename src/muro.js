@@ -157,5 +157,5 @@ eliminar.addEventListener('click',function(){
 //para boton logOut devuelva a index.html
 document.getElementById('loguedOut').addEventListener('click',function(){
   firebase.auth().signOut();
-  location.href='http://localhost:5000/src/';
+  location.href='https://cstgarcia1204.github.io/GDL003-social-network/src/';
 });
